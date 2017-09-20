@@ -2,8 +2,8 @@ package opencc
 
 import "unsafe"
 
-// #cgo LDFLAGS: -lopencc
-// #include "opencc.h"
+// #cgo pkg-config: opencc
+// #include "opencc-go.h"
 import "C"
 
 type Converter struct {

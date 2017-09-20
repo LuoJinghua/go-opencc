@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "opencc/opencc.h"
+#include "opencc.h"
 
 const char *Convert(const char *input, const char *config) {
-	if(strlen(config) > 16) {
+	if (strlen(config) > 16) {
 		return 0;
 	}
 
-	char configFile[256] = "/usr/share/opencc/";
+	char configFile[1024] =  { '\0' };
 	strcat(configFile, config);
 	strcat(configFile, ".json");
 
